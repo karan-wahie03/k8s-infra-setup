@@ -98,12 +98,6 @@ resource "aws_route_table" "aws_rt" {
   }
 }
 
-resource "aws_route_table_association" "aws_rta" {
-  subnet_id      = "${aws_subnet.eu-west-1a-public.id}"
-  route_table_id = "${aws_route_table.aws_rt.id}"
-}
-
-
 /* Bastion Node Launch Configuration*/
 resource "aws_launch_configuration" "bastion" {
   name = "bastion"
